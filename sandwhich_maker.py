@@ -10,3 +10,9 @@ class SandwichMaker:
                 print(f"Sorry, there is not enough {item}.")
                 return False
         return True
+
+    def make_sandwich(self, sandwich_size, order_ingredients):
+        """Deduct the required ingredients from the resources."""
+        for item in order_ingredients:
+            self.machine_resources[item] -= order_ingredients[item]
+        print(f"Made a {sandwich_size} sandwich!")
